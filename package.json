@@ -1,6 +1,6 @@
 {
   "name": "vercel-cron-logger",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Vercel Cron Jobs logger for those who are in pain with the log span limit.",
   "license": "MIT",
   "author": "Jiwon Choi",

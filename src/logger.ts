@@ -18,7 +18,7 @@ export default async function VercelCronLogger(request: Request) {
 
   const authHeader = request.headers.get('authorization')
   if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
-    const log = `Unauthorized request to run the cron job.`
+    const log = `Unauthorized attempt to trigger cron job at ${new Date().toUTCString()}`
     await insertLog(log)
     console.log(log)
     return new Response('Unauthorized', { status: 401 })
