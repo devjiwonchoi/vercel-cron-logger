@@ -15,7 +15,7 @@ describe('Vercel Cron Jobs Logger', () => {
     const response = await VercelCronLogger(request)
     expect(response.status).toBe(401)
     expect(logSpy).toHaveBeenCalledWith(
-      'Unauthorized request to run the cron job.'
+      expect.stringMatching(/Unauthorized attempt to trigger cron job at+/)
     )
   })
 
