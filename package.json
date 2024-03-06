@@ -8,7 +8,7 @@
   "main": "./dist/index.js",
   "scripts": {
     "build": "bunchee",
-    "prepublishOnly": "pnpm build",
+    "prepublishOnly": "pnpm test && pnpm build",
     "test": "jest"
   },
   "dependencies": {
